@@ -1,3 +1,6 @@
 # CreditAppOne
 Кредитное приложение.
 
+
+Output:
+
