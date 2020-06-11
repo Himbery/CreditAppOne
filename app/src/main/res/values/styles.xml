@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="Title">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Title_web">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Title_sw600">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">29sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Text_sw_600">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Edit_text">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#919191</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <style name="Edit_text_sw600">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#919191</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">20dp</item>
+    </style>
+
+    <style parent="Theme.AppCompat.Light.NoActionBar" name="AppTheme.PopupOverlay"/>
+
+    <style name="RatingBar" >
+        <item name="colorControlNormal">#FF8D06</item>
+        <item name="android:minHeight">13dp</item>
+        <item name="android:maxHeight">13dp</item>
+    </style>
+    <style name="Menu_btn">
+        <item name="background">@color/color_card</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="Menu_btn_sw600">
+        <item name="background">@color/color_card</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

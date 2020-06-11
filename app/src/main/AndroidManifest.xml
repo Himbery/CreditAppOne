@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.zelenbiruz.zmonl">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:name="ru.zelenbiruz.zmonl.MyApp"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="ru.zelenbiruz.zmonl.MainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.Service.PushActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"
+                    android:host ="some_url"
+                    android:pathPrefix ="/offer_item"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"/>
+        <activity android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.TwoMainActivity">
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.ThreeMainActivity">
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.TermsOfUseActivity"/>
+        <activity android:name="ru.zelenbiruz.zmonl.LicenseActivity"/>
+        <activity android:name="ru.zelenbiruz.zmonl.PinActivity"/>
+        <activity android:name="ru.zelenbiruz.zmonl.DetailActivity">
+        </activity>
+        <activity android:name="ru.zelenbiruz.zmonl.ErrorActivity"/>
+        <activity android:name="ru.zelenbiruz.zmonl.WebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="ru.zelenbiruz.zmonl.MessageReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter android:priority="100">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.yandex.metrica.push.firebase.MetricaMessagingService" tools:node="remove" />
+        <activity android:name="ru.zelenbiruz.zmonl.Service.NotificationActivity"/>
+
+        <receiver android:name="ru.zelenbiruz.zmonl.SilentPushReceiver">
+            <intent-filter>
+                <action android:name="org.zodzp.dvasem.action.ymp.SILENT_PUSH_RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.yandex.metrica.push.default_notification_icon"
+            android:resource="@drawable/icon"/>
+
+
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"
+            android:permission="android.permission.WAKE_LOCK"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="ru.zelenbiruz.zmonl.Service.UtmReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false"/>
+
+
+    </application>
+
+</manifest>
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/app_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/activity_articles_articles"
+            android:layout_marginStart="14dp"
+            android:layout_centerVertical="true"
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entrance" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:text="@string/pin"
+        android:layout_marginStart="10dp"
+        style="@style/Edit_text"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        >
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:hint="Номер телефона"
+        android:focusableInTouchMode="true"
+        android:inputType="phone"
+        android:maxLength="12"
+        style="@style/Edit_text"
+        android:background="@drawable/rectangle"
+        android:id="@+id/phone_edit"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rectangle"
+        android:layout_marginTop="15dp"
+        android:hint="Код подтверждения"
+        android:maxLength="4"
+        android:inputType="numberPassword"
+        style="@style/Edit_text"
+        android:id="@+id/code_edit"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal">
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/code">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_lil"
+                android:id="@+id/code1"/>
+        </com.andexert.library.RippleView>
+
+        <com.andexert.library.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/ok_btn"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_green"
+                android:id="@+id/ok_btn1"/>
+        </com.andexert.library.RippleView>
+</LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

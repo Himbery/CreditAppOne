@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91189130264",
+    "firebase_url": "https://id27-zmonl-mar.firebaseio.com",
+    "project_id": "id27-zmonl-mar",
+    "storage_bucket": "id27-zmonl-mar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91189130264:android:35355c9bfe1b80dcbaff6d",
+        "android_client_info": {
+          "package_name": "ru.zelenbiruz.zmonl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91189130264-dk3s94uto4fhhpd1427ktrdmbk8h55d5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5aHQh-n8_jgxYx2H84teXSQl8bz8CHfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91189130264-dk3s94uto4fhhpd1427ktrdmbk8h55d5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

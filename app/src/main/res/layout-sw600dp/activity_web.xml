@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/back_but"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title_sw600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Предложение"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <WebView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:id="@+id/web_view"/>
+
+        <ProgressBar
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/text_pb"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"
+            android:textColor="@color/colorBlack"
+            android:text="Нет подключения к интернету"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
